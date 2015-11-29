@@ -1,0 +1,16 @@
+<div class="container chart-wrapper">
+    <h3>按阶段统计用户故事</h3>
+    <hr/>
+    <div class="chart-container">
+        <div chart class="chart-placeholder"
+            source-array="dashboard.stories" source-prop="status"
+            reference-array="dashboard.statuses" reference-prop="name"></div>
+    </div>
+    <h3>按类型统计用户故事</h3>
+    <hr/>
+    <div class="chart-container">
+        <div chart class="chart-placeholder"
+             source-array="dashboard.stories" source-prop="type"
+             reference-array="dashboard.types" reference-prop="name"></div>
+    </div>
+</div>

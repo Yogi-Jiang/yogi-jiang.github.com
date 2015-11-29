@@ -1,0 +1,80 @@
+<div class="user-wrapper">
+    <form name="users.userForm">
+        <table class="table edit">
+            <thead>
+                <tr>
+                    <th width="40%">姓名</th>
+                    <th width="40%">邮箱</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="user in users.users">
+                <td>
+                    <ng-form name="userNameForm">
+                        <input type="text" required name="userName" class="form-control"
+                               ng-model="user.name" ng-blur="users.updateUser(user.id, user)"/>
+                        <div class="error" ng-messages="userNameForm.userName.$error">
+                            <div ng-message="required">
+                                请输入姓名.
+                            </div>
+                        </div>
+                    </ng-form>
+                </td>
+                <td>
+                    <ng-form name="userEmailForm">
+                        <input type="email" required name="userEmail" class="form-control"
+                               ng-model="user.email" ng-blur="users.updateUser(user.id, user)"/>
+                        <div class="error" ng-messages="userNameForm.userEmail.$error">
+                            <div ng-message="required">
+                                请输入邮箱地址.
+                            </div>
+                            <div ng-message="email">
+                                请输入如下邮箱格式：example@example.com
+                            </div>
+                        </div>
+                    </ng-form>
+                </td>
+                <td>
+                    <button type="button" class="btn btn-link"
+                            ng-click="users.removeUser(user.id)">移除</button>
+                    <a class="btn btn-link" href="#/users/{{user.id}}">查看</a>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </form>
+
+    <div class="well">
+        <h4>添加用户</h4>
+
+        <form name="users.newUserForm" class="form-inline new-user"
+            role="form" novalidate ng-submit="users.addUser()">
+            <div class="form-group">
+                <input type="text" required name="userName" class="form-control"
+                    ng-model="users.newUser.name" placeholder="姓名"/>
+                <div class="error" ng-messages="users.newUserForm.userName.$error"
+                    ng-if="users.showMessages('userName')">
+                    <div ng-message="required">
+                        请输入姓名.
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <input type="email" required name="userEmail" class="form-control"
+                       ng-model="users.newUser.email" placeholder="邮箱"/>
+                <div class="error" ng-messages="users.newUserForm.userEmail.$error"
+                     ng-if="users.showMessages('userEmail')">
+                    <div ng-message="required">
+                        请输入邮箱地址.
+                    </div>
+                    <div ng-message="email">
+                        请输入如下邮箱格式：example@example.com
+                    </div>
+                </div>
+            </div>
+            <button type="submit" class="btn btn-default">添加</button>
+        </form>
+    </div>
+</div>
+

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="Angello">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/angello.css">
+    <link rel="stylesheet" href="assets/css/animations.css">
+    <link rel="stylesheet" href="assets/css/normalize.css">
+    <script src="vendor/jquery.js"></script>
+    <script src="vendor/angular.js"></script>
+    <script src="src/angello/Angello.js"></script>
+    <script src="src/angello/app/App.js"></script>
+    <script src="src/angello/app/controllers/MainController.js"></script>
+    <script src="src/angello/app/models/StoriesModel.js"></script>
+    <script src="src/angello/app/models/UsersModel.js"></script>
+    <script src="vendor/angular-route.js"></script>
+    <script src="src/angello/storyboard/Storyboard.js"></script>
+    <script src="src/angello/storyboard/controllers/StroyboardController.js"></script>
+    <script src="src/angello/storyboard/directives/DragAndDrop.js"></script>
+    <script src="src/angello/user/User.js"></script>
+    <script src="src/angello/user/directives/UserStoryDirective.js"></script>
+    <script src="src/angello/user/controllers/UsersController.js"></script>
+    <script src="src/angello/user/controllers/UserController.js"></script>
+    <script src="vendor/flot/jquery.flot.js"></script>
+    <script src="vendor/flot/jquery.flot.categories.js"></script>
+    <script src="src/angello/dashboard/Dashboard.js"></script>
+    <script src="src/angello/dashboard/controllers/DashboardController.js"></script>
+    <script src="src/angello/dashboard/directives/ChartDirective.js"></script>
+    <script src="vendor/angular-animate.js"></script>
+    <script src="vendor/TweenMax.min.js"></script>
+    <script src="vendor/angular-messages.min.js"></script>
+    <script src="src/angello/app/animations/DetailsAnimation.js"></script>
+
+</head>
+<body ng-controller="MainCtrl as main">
+    <div class="navbar navbar-fixed-top navbar-default">
+        <div class="navbar-header">
+            <a href="#/" class="logo navbar-brand">
+                <!--<img src="assets/img/angello.png" alt="" />-->
+                <h2>Angello故事板</h2>
+            </a>
+        </div>
+        <div class="btn-group pull-right" ng-show="true">
+            <a class="btn btn-danger" href="#/">
+                <span class="glyphicon glyphicon-home"></span>
+            </a>
+            <a href="#/users" class="btn btn-danger">
+                <span class="glyphicon glyphicon-user"></span>
+            </a>
+            <a href="#/dashboard" class="btn btn-danger">
+                <span class="glyphicon glyphicon-signal"></span>
+            </a>
+        </div>
+    </div>
+    <div ng-view=""></div>
+    <div class="modal"></div>
+</body>
+</html>
