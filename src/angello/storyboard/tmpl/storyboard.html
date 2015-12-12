@@ -1,0 +1,135 @@
+<div class="list-area">
+    <div class="list-wrapper">
+        <ul class="list my-repeat-animation"
+            ng-repeat="status in storyboard.statuses">
+            <h3 class="status">{{::status.name}}</h3>
+            <hr />
+            <li userStory  class="story my-repeat-animation"
+                ng-repeat="story in storyboard.stories
+                    | filter: {status: status.name}"
+                drag-container="story"
+                mime-type="application/x-angello-status"
+                drop-container=""
+                accepts="['application/x-angello-status']"
+                ng-click="storyboard.setCurrentStory(story)">
+                <div drop-target="top"
+                     on-drag-enter="storyboard.insertAdjacent(story, data, true)"
+                     on-drop="storyboard.finalizeDrop(data)"></div>
+                <div drop-target="bottom"
+                     on-drag-enter="storyboard.insertAdjacent(story, data, false)"
+                     on-drop="storyboard.finalizeDrop(data)"></div>
+                <article>
+                    <div>
+                        <button class="close" type="button"
+                                ng-click="storyboard.deleteStory(story.id)">×</button>
+                        <p class="title">{{story.title}}</p>
+                    </div>
+                    <div class="type-bar {{story.sClass}}"></div>
+                    <div>
+                        <p>{{story.description}}</p>
+                    </div>
+                </article>
+            </li>
+            <div class="emptystatus" drop-container=""
+                 accepts="['application/x-angello-status']"
+                 on-drop="storyboard.finalizeDrop(data)"
+                 on-drag-enter="storyboard.changeStatus(data, status)"
+                 ng-if="storyboard.isEmptyStatus(status)">
+
+            </div>
+        </ul>
+    </div>
+</div>
+<div class="details details-animation"
+     ng-class="{'details-visible': storyboard.detailsVisible}"
+        >
+    <div class="details-nav">
+        <div ng-if="!storyboard.detailsVisible">
+            <button class="btn btn-default pull-left"
+                    ng-click="storyboard.setDetailsVisible(true)">
+                <span class="glyphicon glyphicon-arrow-left"></span>
+            </button>
+        </div>
+        <div ng-if="storyboard.detailsVisible">
+            <button class="btn btn-default pull-right"
+                    ng-click="storyboard.setDetailsVisible(false)">
+                <span class="glyphicon glyphicon-arrow-right"></span>
+            </button>
+        </div>
+    </div>
+    <div ng-if="storyboard.detailsVisible" class="my-fade-animation">
+        <h3>任务详细信息</h3>
+        <form name="storyboard.detailsForm">
+            <div class="form-group">
+                <div class="controls">
+                    <label for="inputTitle" class="control-label">*标题</label>
+                    <input type="text" id="inputTitle" name="inputTitle" placeholder="标题"
+                           ng-model="storyboard.editedStory.title"   ng-required="true"
+                           ng-minlength="3" ng-maxlength="30" class="form-control" />
+                    <div class="alert alert-warning"
+                         ng-messages="storyboard.detailsForm.inputTitle.$error"
+                         ng-if="storyboard.showMessages('inputTitle')">
+                        <div ng-message="required">
+                            <small>标题不能为空!</small>
+                        </div>
+                        <div ng-message="minlength">
+                            <small>标题太短了!</small>
+                        </div>
+                        <div ng-message="maxlength">
+                            <small>标题太长了!</small>
+                        </div>
+                    </div>
+                    <label for="inputStatus" class="control-label">*状态</label>
+                    <select name="inputStatus" id="inputStatus"
+                            ng-model="storyboard.editedStory.status" ng-required="true"
+                            ng-options="status.name as status.name for status in storyboard.statuses"  class="form-control" >
+                        <option value="">请选择状态</option>
+                    </select>
+                    <label for="inputType" class="control-label">*类型</label>
+                    <select name="inputType" id="inputType"
+                            ng-model="storyboard.editedStory.type" ng-required="true"
+                            ng-options="type.name as type.name for type in storyboard.types"  class="form-control" >
+                        <option value="">请选择类型</option>
+                    </select>
+                    <label for="inputDescription" class="control-label">描述</label>
+                <textarea name="inputDescription" id="inputDescription" placeholder="请输入描述" cols="28" rows="4"
+                          ng-model="storyboard.editedStory.description" class="form-control"></textarea>
+                    <label for="inputCriteria" class="control-label">完成的标准</label>
+                <textarea name="inputCriteria" id="inputCriteria" placeholder="完成的标准" cols="28" rows="4"
+                          ng-model="storyboard.editedStory.criteria" class="form-control"></textarea>
+                    <label for="inputReporter" class="control-label">*报告人</label>
+                    <select name="inputReporter" id="inputReporter"
+                            ng-model="storyboard.editedStory.reporter" ng-required="true"
+                            ng-options="user.id as user.name for user in storyboard.users"  class="form-control" >
+                        <option value="">请选择 ...</option>
+                    </select>
+                    <label for="inputAssignee" class="control-label">*受托人</label>
+                    <select name="inputAssignee" id="inputAssignee"
+                            ng-model="storyboard.editedStory.assignee" ng-required="true"
+                            ng-options="user.id as user.name for user in storyboard.users"  class="form-control" >
+                        <option value="">请选择 ...</option>
+                    </select>
+                </div>
+            </div>
+        </form>
+        <hr/>
+        <div ng-if="storyboard.currentStory">
+            <button class="btn btn-default"
+                    ng-click="storyboard.updateCancel()">
+                取消
+            </button>
+            <button class="btn btn-default pull-right"
+                    ng-disabled="storyboard.detailsForm.$invalid"
+                    ng-click="storyboard.updateStory()">
+                更新任务
+            </button>
+        </div>
+        <div ng-if="!storyboard.currentStory">
+            <button class="btn btn-default pull-right"
+                    ng-disabled="!storyboard.detailsForm.$valid"
+                    ng-click="storyboard.createStory()">
+                创建任务
+            </button>
+        </div>
+    </div>
+</div>
