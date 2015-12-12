@@ -41,7 +41,7 @@ angular.module("Angello.Common")
                 "id": "1",
                 "reporter": "2",
                 "status": "还没做的",
-                "title": "第一个故事",
+                "title": "第一个任务",
                 "type": "新功能",
                 "sClass": "Feature"
             },
@@ -52,7 +52,7 @@ angular.module("Angello.Common")
                 "id": "2",
                 "reporter": "1",
                 "status": "正在做的",
-                "title": "第二个故事",
+                "title": "第二个任务",
                 "type": "改善",
                 "sClass": "Enhancement"
             },
@@ -63,7 +63,7 @@ angular.module("Angello.Common")
                 "id": "3",
                 "reporter": "3",
                 "status": "正在做的",
-                "title": "第三个故事",
+                "title": "第三个任务",
                 "type": "Bug修复",
                 "sClass": "Bug"
             }

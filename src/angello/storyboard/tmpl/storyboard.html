@@ -1,27 +1,27 @@
 <div class="list-area">
     <div class="list-wrapper">
         <ul class="list my-repeat-animation"
-                ng-repeat="status in storyboard.statuses">
+            ng-repeat="status in storyboard.statuses">
             <h3 class="status">{{::status.name}}</h3>
             <hr />
             <li userStory  class="story my-repeat-animation"
-                    ng-repeat="story in storyboard.stories
+                ng-repeat="story in storyboard.stories
                     | filter: {status: status.name}"
-                    drag-container="story"
-                    mime-type="application/x-angello-status"
-                    drop-container=""
-                    accepts="['application/x-angello-status']"
-                    ng-click="storyboard.setCurrentStory(story)">
+                drag-container="story"
+                mime-type="application/x-angello-status"
+                drop-container=""
+                accepts="['application/x-angello-status']"
+                ng-click="storyboard.setCurrentStory(story)">
                 <div drop-target="top"
-                    on-drag-enter="storyboard.insertAdjacent(story, data, true)"
-                    on-drop="storyboard.finalizeDrop(data)"></div>
+                     on-drag-enter="storyboard.insertAdjacent(story, data, true)"
+                     on-drop="storyboard.finalizeDrop(data)"></div>
                 <div drop-target="bottom"
                      on-drag-enter="storyboard.insertAdjacent(story, data, false)"
                      on-drop="storyboard.finalizeDrop(data)"></div>
                 <article>
                     <div>
                         <button class="close" type="button"
-                            ng-click="storyboard.deleteStory(story.id)">×</button>
+                                ng-click="storyboard.deleteStory(story.id)">×</button>
                         <p class="title">{{story.title}}</p>
                     </div>
                     <div class="type-bar {{story.sClass}}"></div>
@@ -31,10 +31,10 @@
                 </article>
             </li>
             <div class="emptystatus" drop-container=""
-                accepts="['application/x-angello-status']"
-                on-drop="storyboard.finalizeDrop(data)"
-                on-drag-enter="storyboard.changeStatus(data, status)"
-                ng-if="storyboard.isEmptyStatus(status)">
+                 accepts="['application/x-angello-status']"
+                 on-drop="storyboard.finalizeDrop(data)"
+                 on-drag-enter="storyboard.changeStatus(data, status)"
+                 ng-if="storyboard.isEmptyStatus(status)">
 
             </div>
         </ul>
@@ -46,7 +46,7 @@
     <div class="details-nav">
         <div ng-if="!storyboard.detailsVisible">
             <button class="btn btn-default pull-left"
-                ng-click="storyboard.setDetailsVisible(true)">
+                    ng-click="storyboard.setDetailsVisible(true)">
                 <span class="glyphicon glyphicon-arrow-left"></span>
             </button>
         </div>
@@ -58,7 +58,7 @@
         </div>
     </div>
     <div ng-if="storyboard.detailsVisible" class="my-fade-animation">
-        <h3>故事详细信息</h3>
+        <h3>任务详细信息</h3>
         <form name="storyboard.detailsForm">
             <div class="form-group">
                 <div class="controls">
@@ -67,8 +67,8 @@
                            ng-model="storyboard.editedStory.title"   ng-required="true"
                            ng-minlength="3" ng-maxlength="30" class="form-control" />
                     <div class="alert alert-warning"
-                        ng-messages="storyboard.detailsForm.inputTitle.$error"
-                        ng-if="storyboard.showMessages('inputTitle')">
+                         ng-messages="storyboard.detailsForm.inputTitle.$error"
+                         ng-if="storyboard.showMessages('inputTitle')">
                         <div ng-message="required">
                             <small>标题不能为空!</small>
                         </div>
@@ -79,11 +79,11 @@
                             <small>标题太长了!</small>
                         </div>
                     </div>
-                    <label for="inputStatus" class="control-label">*阶段</label>
+                    <label for="inputStatus" class="control-label">*状态</label>
                     <select name="inputStatus" id="inputStatus"
                             ng-model="storyboard.editedStory.status" ng-required="true"
                             ng-options="status.name as status.name for status in storyboard.statuses"  class="form-control" >
-                        <option value="">请选择阶段</option>
+                        <option value="">请选择状态</option>
                     </select>
                     <label for="inputType" class="control-label">*类型</label>
                     <select name="inputType" id="inputType"
@@ -94,8 +94,8 @@
                     <label for="inputDescription" class="control-label">描述</label>
                 <textarea name="inputDescription" id="inputDescription" placeholder="请输入描述" cols="28" rows="4"
                           ng-model="storyboard.editedStory.description" class="form-control"></textarea>
-                    <label for="inputCriteria" class="control-label">进入下一阶段的标准</label>
-                <textarea name="inputCriteria" id="inputCriteria" placeholder="请输入进入下一阶段的标准" cols="28" rows="4"
+                    <label for="inputCriteria" class="control-label">完成的标准</label>
+                <textarea name="inputCriteria" id="inputCriteria" placeholder="完成的标准" cols="28" rows="4"
                           ng-model="storyboard.editedStory.criteria" class="form-control"></textarea>
                     <label for="inputReporter" class="control-label">*报告人</label>
                     <select name="inputReporter" id="inputReporter"
@@ -121,14 +121,14 @@
             <button class="btn btn-default pull-right"
                     ng-disabled="storyboard.detailsForm.$invalid"
                     ng-click="storyboard.updateStory()">
-                更新故事
+                更新任务
             </button>
         </div>
         <div ng-if="!storyboard.currentStory">
             <button class="btn btn-default pull-right"
                     ng-disabled="!storyboard.detailsForm.$valid"
                     ng-click="storyboard.createStory()">
-                创建故事
+                创建任务
             </button>
         </div>
     </div>

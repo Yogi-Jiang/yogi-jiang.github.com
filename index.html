@@ -34,26 +34,25 @@
 
 </head>
 <body ng-controller="MainCtrl as main">
-    <div class="navbar navbar-fixed-top navbar-default">
-        <div class="navbar-header">
-            <a href="#/" class="logo navbar-brand">
-                <!--<img src="assets/img/angello.png" alt="" />-->
-                <h2>Angello故事板</h2>
-            </a>
-        </div>
-        <div class="btn-group pull-right" ng-show="true">
-            <a class="btn btn-danger" href="#/">
-                <span class="glyphicon glyphicon-home"></span>
-            </a>
-            <a href="#/users" class="btn btn-danger">
-                <span class="glyphicon glyphicon-user"></span>
-            </a>
-            <a href="#/dashboard" class="btn btn-danger">
-                <span class="glyphicon glyphicon-signal"></span>
-            </a>
-        </div>
+<div class="navbar navbar-fixed-top navbar-default">
+    <div class="navbar-header">
+        <a href="#/" class="logo navbar-brand">
+            <!--<img src="assets/img/angello.png" alt="" />-->
+            <h2>Angello项目板</h2>
+        </a>
     </div>
-    <div ng-view=""></div>
-    <div class="modal"></div>
+    <div class="btn-group pull-right" ng-show="true">
+        <a class="btn btn-danger" href="#/">
+            <span class="glyphicon glyphicon-home"></span>
+        </a>
+        <a href="#/users" class="btn btn-danger">
+            <span class="glyphicon glyphicon-user"></span>
+        </a>
+        <a href="#/dashboard" class="btn btn-danger">
+            <span class="glyphicon glyphicon-signal"></span>
+        </a>
+    </div>
+</div>
+<div ng-view=""></div>
 </body>
 </html>
