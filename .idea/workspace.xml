@@ -1,97 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="5cf5692f-ad78-4db4-933d-a085cb3590c1" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MOVED" beforePath="G:\projects\github\client\assets\css\angello.css" afterPath="$PROJECT_DIR$/assets/css/angello.css" />
-      <change type="MOVED" beforePath="G:\projects\github\client\assets\css\animations.css" afterPath="$PROJECT_DIR$/assets/css/animations.css" />
-      <change type="MOVED" beforePath="G:\projects\github\client\assets\css\animations_old.css" afterPath="$PROJECT_DIR$/assets/css/animations_old.css" />
-      <change type="MOVED" beforePath="G:\projects\github\client\assets\css\normalize.css" afterPath="$PROJECT_DIR$/assets/css/normalize.css" />
-      <change type="MOVED" beforePath="G:\projects\github\client\assets\img\AngularJS-large.png" afterPath="$PROJECT_DIR$/assets/img/AngularJS-large.png" />
-      <change type="MOVED" beforePath="G:\projects\github\client\assets\img\AngularJS-small.png" afterPath="$PROJECT_DIR$/assets/img/AngularJS-small.png" />
-      <change type="MOVED" beforePath="G:\projects\github\client\assets\img\angello.png" afterPath="$PROJECT_DIR$/assets/img/angello.png" />
-      <change type="MOVED" beforePath="G:\projects\github\client\assets\img\bg-login.png" afterPath="$PROJECT_DIR$/assets/img/bg-login.png" />
-      <change type="MOVED" beforePath="G:\projects\github\client\assets\img\bg-wood.jpg" afterPath="$PROJECT_DIR$/assets/img/bg-wood.jpg" />
-      <change type="MOVED" beforePath="G:\projects\github\client\assets\img\bg.jpg" afterPath="$PROJECT_DIR$/assets/img/bg.jpg" />
-      <change type="MOVED" beforePath="G:\projects\github\client\assets\img\loader.gif" afterPath="$PROJECT_DIR$/assets/img/loader.gif" />
-      <change type="MOVED" beforePath="G:\projects\github\client\assets\img\note-bg.png" afterPath="$PROJECT_DIR$/assets/img/note-bg.png" />
-      <change type="MOVED" beforePath="G:\projects\github\client\assets\img\note-blank.png" afterPath="$PROJECT_DIR$/assets/img/note-blank.png" />
-      <change type="MOVED" beforePath="G:\projects\github\client\assets\js\boot.js" afterPath="$PROJECT_DIR$/assets/js/boot.js" />
-      <change type="MOVED" beforePath="G:\projects\github\client\src\angello\Angello.js" afterPath="$PROJECT_DIR$/src/angello/Angello.js" />
-      <change type="MOVED" beforePath="G:\projects\github\client\src\angello\app\App.js" afterPath="$PROJECT_DIR$/src/angello/app/App.js" />
-      <change type="MOVED" beforePath="G:\projects\github\client\src\angello\app\animations\DetailsAnimation.js" afterPath="$PROJECT_DIR$/src/angello/app/animations/DetailsAnimation.js" />
-      <change type="MOVED" beforePath="G:\projects\github\client\src\angello\app\controllers\MainController.js" afterPath="$PROJECT_DIR$/src/angello/app/controllers/MainController.js" />
-      <change type="MOVED" beforePath="G:\projects\github\client\src\angello\app\models\StoriesModel.js" afterPath="$PROJECT_DIR$/src/angello/app/models/StoriesModel.js" />
-      <change type="MOVED" beforePath="G:\projects\github\client\src\angello\app\models\UsersModel.js" afterPath="$PROJECT_DIR$/src/angello/app/models/UsersModel.js" />
-      <change type="MOVED" beforePath="G:\projects\github\client\src\angello\dashboard\Dashboard.js" afterPath="$PROJECT_DIR$/src/angello/dashboard/Dashboard.js" />
-      <change type="MOVED" beforePath="G:\projects\github\client\src\angello\dashboard\controllers\DashboardController.js" afterPath="$PROJECT_DIR$/src/angello/dashboard/controllers/DashboardController.js" />
-      <change type="MOVED" beforePath="G:\projects\github\client\src\angello\dashboard\directives\ChartDirective.js" afterPath="$PROJECT_DIR$/src/angello/dashboard/directives/ChartDirective.js" />
-      <change type="MOVED" beforePath="G:\projects\github\client\src\angello\dashboard\tmpl\dashboard.html" afterPath="$PROJECT_DIR$/src/angello/dashboard/tmpl/dashboard.html" />
-      <change type="MOVED" beforePath="G:\projects\github\client\src\angello\storyboard\Storyboard.js" afterPath="$PROJECT_DIR$/src/angello/storyboard/Storyboard.js" />
-      <change type="MOVED" beforePath="G:\projects\github\client\src\angello\storyboard\controllers\StroyboardController.js" afterPath="$PROJECT_DIR$/src/angello/storyboard/controllers/StroyboardController.js" />
-      <change type="MOVED" beforePath="G:\projects\github\client\src\angello\storyboard\directives\DragAndDrop.js" afterPath="$PROJECT_DIR$/src/angello/storyboard/directives/DragAndDrop.js" />
-      <change type="MOVED" beforePath="G:\projects\github\client\src\angello\storyboard\tmpl\storyboard.html" afterPath="$PROJECT_DIR$/src/angello/storyboard/tmpl/storyboard.html" />
-      <change type="MOVED" beforePath="G:\projects\github\client\src\angello\user\User.js" afterPath="$PROJECT_DIR$/src/angello/user/User.js" />
-      <change type="MOVED" beforePath="G:\projects\github\client\src\angello\user\controllers\UserController.js" afterPath="$PROJECT_DIR$/src/angello/user/controllers/UserController.js" />
-      <change type="MOVED" beforePath="G:\projects\github\client\src\angello\user\controllers\UsersController.js" afterPath="$PROJECT_DIR$/src/angello/user/controllers/UsersController.js" />
-      <change type="MOVED" beforePath="G:\projects\github\client\src\angello\user\directives\UserStoryDirective.js" afterPath="$PROJECT_DIR$/src/angello/user/directives/UserStoryDirective.js" />
-      <change type="MOVED" beforePath="G:\projects\github\client\src\angello\user\tmpl\user.html" afterPath="$PROJECT_DIR$/src/angello/user/tmpl/user.html" />
-      <change type="MOVED" beforePath="G:\projects\github\client\src\angello\user\tmpl\users.html" afterPath="$PROJECT_DIR$/src/angello/user/tmpl/users.html" />
-      <change type="MOVED" beforePath="G:\projects\github\client\tests\specs\controllers\StoryboardController.spec.js" afterPath="$PROJECT_DIR$/tests/specs/controllers/StoryboardController.spec.js" />
-      <change type="MOVED" beforePath="G:\projects\github\client\vendor\TweenMax.min.js" afterPath="$PROJECT_DIR$/vendor/TweenMax.min.js" />
-      <change type="MOVED" beforePath="G:\projects\github\client\vendor\angular-animate.js" afterPath="$PROJECT_DIR$/vendor/angular-animate.js" />
-      <change type="MOVED" beforePath="G:\projects\github\client\vendor\angular-jwt.js" afterPath="$PROJECT_DIR$/vendor/angular-jwt.js" />
-      <change type="MOVED" beforePath="G:\projects\github\client\vendor\angular-messages.min.js" afterPath="$PROJECT_DIR$/vendor/angular-messages.min.js" />
-      <change type="MOVED" beforePath="G:\projects\github\client\vendor\angular-mocks.js" afterPath="$PROJECT_DIR$/vendor/angular-mocks.js" />
-      <change type="MOVED" beforePath="G:\projects\github\client\vendor\angular-route.js" afterPath="$PROJECT_DIR$/vendor/angular-route.js" />
-      <change type="MOVED" beforePath="G:\projects\github\client\vendor\angular-storage.js" afterPath="$PROJECT_DIR$/vendor/angular-storage.js" />
-      <change type="MOVED" beforePath="G:\projects\github\client\vendor\angular.js" afterPath="$PROJECT_DIR$/vendor/angular.js" />
-      <change type="MOVED" beforePath="G:\projects\github\client\vendor\bootstrap\css\bootstrap-theme.css" afterPath="$PROJECT_DIR$/vendor/bootstrap/css/bootstrap-theme.css" />
-      <change type="MOVED" beforePath="G:\projects\github\client\vendor\bootstrap\css\bootstrap-theme.css.map" afterPath="$PROJECT_DIR$/vendor/bootstrap/css/bootstrap-theme.css.map" />
-      <change type="MOVED" beforePath="G:\projects\github\client\vendor\bootstrap\css\bootstrap-theme.min.css" afterPath="$PROJECT_DIR$/vendor/bootstrap/css/bootstrap-theme.min.css" />
-      <change type="MOVED" beforePath="G:\projects\github\client\vendor\bootstrap\css\bootstrap.css" afterPath="$PROJECT_DIR$/vendor/bootstrap/css/bootstrap.css" />
-      <change type="MOVED" beforePath="G:\projects\github\client\vendor\bootstrap\css\bootstrap.css.map" afterPath="$PROJECT_DIR$/vendor/bootstrap/css/bootstrap.css.map" />
-      <change type="MOVED" beforePath="G:\projects\github\client\vendor\bootstrap\css\bootstrap.min.css" afterPath="$PROJECT_DIR$/vendor/bootstrap/css/bootstrap.min.css" />
-      <change type="MOVED" beforePath="G:\projects\github\client\vendor\bootstrap\css\main.css" afterPath="$PROJECT_DIR$/vendor/bootstrap/css/main.css" />
-      <change type="MOVED" beforePath="G:\projects\github\client\vendor\bootstrap\css\normalize.css" afterPath="$PROJECT_DIR$/vendor/bootstrap/css/normalize.css" />
-      <change type="MOVED" beforePath="G:\projects\github\client\vendor\bootstrap\fonts\glyphicons-halflings-regular.eot" afterPath="$PROJECT_DIR$/vendor/bootstrap/fonts/glyphicons-halflings-regular.eot" />
-      <change type="MOVED" beforePath="G:\projects\github\client\vendor\bootstrap\fonts\glyphicons-halflings-regular.svg" afterPath="$PROJECT_DIR$/vendor/bootstrap/fonts/glyphicons-halflings-regular.svg" />
-      <change type="MOVED" beforePath="G:\projects\github\client\vendor\bootstrap\fonts\glyphicons-halflings-regular.ttf" afterPath="$PROJECT_DIR$/vendor/bootstrap/fonts/glyphicons-halflings-regular.ttf" />
-      <change type="MOVED" beforePath="G:\projects\github\client\vendor\bootstrap\fonts\glyphicons-halflings-regular.woff" afterPath="$PROJECT_DIR$/vendor/bootstrap/fonts/glyphicons-halflings-regular.woff" />
-      <change type="MOVED" beforePath="G:\projects\github\client\vendor\bootstrap\images\1.jpg" afterPath="$PROJECT_DIR$/vendor/bootstrap/images/1.jpg" />
-      <change type="MOVED" beforePath="G:\projects\github\client\vendor\bootstrap\images\2.jpg" afterPath="$PROJECT_DIR$/vendor/bootstrap/images/2.jpg" />
-      <change type="MOVED" beforePath="G:\projects\github\client\vendor\bootstrap\images\3.jpg" afterPath="$PROJECT_DIR$/vendor/bootstrap/images/3.jpg" />
-      <change type="MOVED" beforePath="G:\projects\github\client\vendor\bootstrap\images\basesmall.swf" afterPath="$PROJECT_DIR$/vendor/bootstrap/images/basesmall.swf" />
-      <change type="MOVED" beforePath="G:\projects\github\client\vendor\bootstrap\images\chrome-big.jpg" afterPath="$PROJECT_DIR$/vendor/bootstrap/images/chrome-big.jpg" />
-      <change type="MOVED" beforePath="G:\projects\github\client\vendor\bootstrap\images\chrome-logo-small.jpg" afterPath="$PROJECT_DIR$/vendor/bootstrap/images/chrome-logo-small.jpg" />
-      <change type="MOVED" beforePath="G:\projects\github\client\vendor\bootstrap\images\chrome-logo.jpg" afterPath="$PROJECT_DIR$/vendor/bootstrap/images/chrome-logo.jpg" />
-      <change type="MOVED" beforePath="G:\projects\github\client\vendor\bootstrap\images\firefox-big.jpg" afterPath="$PROJECT_DIR$/vendor/bootstrap/images/firefox-big.jpg" />
-      <change type="MOVED" beforePath="G:\projects\github\client\vendor\bootstrap\images\firefox-logo-small.jpg" afterPath="$PROJECT_DIR$/vendor/bootstrap/images/firefox-logo-small.jpg" />
-      <change type="MOVED" beforePath="G:\projects\github\client\vendor\bootstrap\images\firefox-logo.jpg" afterPath="$PROJECT_DIR$/vendor/bootstrap/images/firefox-logo.jpg" />
-      <change type="MOVED" beforePath="G:\projects\github\client\vendor\bootstrap\images\header_bg.jpg" afterPath="$PROJECT_DIR$/vendor/bootstrap/images/header_bg.jpg" />
-      <change type="MOVED" beforePath="G:\projects\github\client\vendor\bootstrap\images\header_icon.png" afterPath="$PROJECT_DIR$/vendor/bootstrap/images/header_icon.png" />
-      <change type="MOVED" beforePath="G:\projects\github\client\vendor\bootstrap\images\ie-big.jpg" afterPath="$PROJECT_DIR$/vendor/bootstrap/images/ie-big.jpg" />
-      <change type="MOVED" beforePath="G:\projects\github\client\vendor\bootstrap\images\ie-logo.jpg" afterPath="$PROJECT_DIR$/vendor/bootstrap/images/ie-logo.jpg" />
-      <change type="MOVED" beforePath="G:\projects\github\client\vendor\bootstrap\images\logo.psd" afterPath="$PROJECT_DIR$/vendor/bootstrap/images/logo.psd" />
-      <change type="MOVED" beforePath="G:\projects\github\client\vendor\bootstrap\images\movie.ogg" afterPath="$PROJECT_DIR$/vendor/bootstrap/images/movie.ogg" />
-      <change type="MOVED" beforePath="G:\projects\github\client\vendor\bootstrap\images\opera-big.jpg" afterPath="$PROJECT_DIR$/vendor/bootstrap/images/opera-big.jpg" />
-      <change type="MOVED" beforePath="G:\projects\github\client\vendor\bootstrap\images\opera-logo.jpg" afterPath="$PROJECT_DIR$/vendor/bootstrap/images/opera-logo.jpg" />
-      <change type="MOVED" beforePath="G:\projects\github\client\vendor\bootstrap\images\safari-big.jpg" afterPath="$PROJECT_DIR$/vendor/bootstrap/images/safari-big.jpg" />
-      <change type="MOVED" beforePath="G:\projects\github\client\vendor\bootstrap\images\safari-logo-small.jpg" afterPath="$PROJECT_DIR$/vendor/bootstrap/images/safari-logo-small.jpg" />
-      <change type="MOVED" beforePath="G:\projects\github\client\vendor\bootstrap\images\safari-logo.jpg" afterPath="$PROJECT_DIR$/vendor/bootstrap/images/safari-logo.jpg" />
-      <change type="MOVED" beforePath="G:\projects\github\client\vendor\bootstrap\js\bootstrap.js" afterPath="$PROJECT_DIR$/vendor/bootstrap/js/bootstrap.js" />
-      <change type="MOVED" beforePath="G:\projects\github\client\vendor\bootstrap\js\bootstrap.min.js" afterPath="$PROJECT_DIR$/vendor/bootstrap/js/bootstrap.min.js" />
-      <change type="MOVED" beforePath="G:\projects\github\client\vendor\bootstrap\js\jquery.min.js" afterPath="$PROJECT_DIR$/vendor/bootstrap/js/jquery.min.js" />
-      <change type="MOVED" beforePath="G:\projects\github\client\vendor\bootstrap\js\npm.js" afterPath="$PROJECT_DIR$/vendor/bootstrap/js/npm.js" />
-      <change type="MOVED" beforePath="G:\projects\github\client\vendor\custom.modernizr.js" afterPath="$PROJECT_DIR$/vendor/custom.modernizr.js" />
-      <change type="MOVED" beforePath="G:\projects\github\client\vendor\flot\jquery.flot.categories.js" afterPath="$PROJECT_DIR$/vendor/flot/jquery.flot.categories.js" />
-      <change type="MOVED" beforePath="G:\projects\github\client\vendor\flot\jquery.flot.js" afterPath="$PROJECT_DIR$/vendor/flot/jquery.flot.js" />
-      <change type="MOVED" beforePath="G:\projects\github\client\vendor\head.load.min.js" afterPath="$PROJECT_DIR$/vendor/head.load.min.js" />
-      <change type="MOVED" beforePath="G:\projects\github\client\vendor\jquery-ui-1.10.3.custom.min.js" afterPath="$PROJECT_DIR$/vendor/jquery-ui-1.10.3.custom.min.js" />
-      <change type="MOVED" beforePath="G:\projects\github\client\vendor\jquery.js" afterPath="$PROJECT_DIR$/vendor/jquery.js" />
-      <change type="MOVED" beforePath="G:\projects\github\client\vendor\sugar-1.3.9.min.js" afterPath="$PROJECT_DIR$/vendor/sugar-1.3.9.min.js" />
-    </list>
+    <list default="true" id="5cf5692f-ad78-4db4-933d-a085cb3590c1" name="Default" comment="" />
     <ignored path="github.iws" />
     <ignored path=".idea/workspace.xml" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -236,7 +146,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="0" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="1" />
     <editor active="false" />
     <layout>
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />

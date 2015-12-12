@@ -3,18 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <title></title>
-    <link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../vendor/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/css/angello.css">
     <link rel="stylesheet" href="assets/css/animations.css">
     <link rel="stylesheet" href="assets/css/normalize.css">
-    <script src="vendor/jquery.js"></script>
-    <script src="vendor/angular.js"></script>
+    <script src="../vendor/jquery.js"></script>
+    <script src="../vendor/angular.js"></script>
     <script src="src/angello/Angello.js"></script>
     <script src="src/angello/app/App.js"></script>
+    <script src="../vendor/angular-modal-service.js"></script>
+    <script src="src/angello/modal/Modal.js"></script>
+    <script src="src/angello/modal/controllers/YesNoController.js"></script>
     <script src="src/angello/app/controllers/MainController.js"></script>
     <script src="src/angello/app/models/StoriesModel.js"></script>
     <script src="src/angello/app/models/UsersModel.js"></script>
-    <script src="vendor/angular-route.js"></script>
+    <script src="../vendor/angular-route.js"></script>
     <script src="src/angello/storyboard/Storyboard.js"></script>
     <script src="src/angello/storyboard/controllers/StroyboardController.js"></script>
     <script src="src/angello/storyboard/directives/DragAndDrop.js"></script>
@@ -22,14 +25,14 @@
     <script src="src/angello/user/directives/UserStoryDirective.js"></script>
     <script src="src/angello/user/controllers/UsersController.js"></script>
     <script src="src/angello/user/controllers/UserController.js"></script>
-    <script src="vendor/flot/jquery.flot.js"></script>
-    <script src="vendor/flot/jquery.flot.categories.js"></script>
+    <script src="../vendor/flot/jquery.flot.js"></script>
+    <script src="../vendor/flot/jquery.flot.categories.js"></script>
     <script src="src/angello/dashboard/Dashboard.js"></script>
     <script src="src/angello/dashboard/controllers/DashboardController.js"></script>
     <script src="src/angello/dashboard/directives/ChartDirective.js"></script>
-    <script src="vendor/angular-animate.js"></script>
-    <script src="vendor/TweenMax.min.js"></script>
-    <script src="vendor/angular-messages.min.js"></script>
+    <script src="../vendor/angular-animate.js"></script>
+    <script src="../vendor/TweenMax.min.js"></script>
+    <script src="../vendor/angular-messages.min.js"></script>
     <script src="src/angello/app/animations/DetailsAnimation.js"></script>
 
 </head>
@@ -38,8 +41,9 @@
         <div class="navbar-header">
             <a href="#/" class="logo navbar-brand">
                 <!--<img src="assets/img/angello.png" alt="" />-->
-                <h2>Angello故事板</h2>
+                <h2>Angello项目板</h2>
             </a>
+            <!--<input type="button" value="模态框" ng-click="main.showAModal()"/>-->
         </div>
         <div class="btn-group pull-right" ng-show="true">
             <a class="btn btn-danger" href="#/">

@@ -9,35 +9,12 @@ var myModule = angular.module("Angello",
         "Angello.Common",
         "Angello.Dashboard",
         "Angello.Storyboard",
-        "Angello.User"
+        "Angello.User",
+        "angularModalService",
+        "Angello.Modal"
     ]);
 
 myModule.config(function ($routeProvider, $provide) {
-
-    //decorators
-    $provide.decorator("$log", function ($delegate) {
-        function timeStamp() {
-            var oNow = new Date();
-            var date = [fillZero(oNow.getMonth() + 1), fillZero(oNow.getDate()), oNow.getFullYear()];
-            var time = [fillZero(oNow.getHours()), fillZero(oNow.getMinutes()), fillZero(oNow.getSeconds())];
-            var suffix = time[0] < 12 ? "AM" : "PM";
-            time[0] > 12 ? time[0] - 12 : time[0];
-            time[0] = time[0] || 12;
-            return date.join("/") + " " + time.join(":") + " " + suffix;
-        }
-
-        function fillZero(n) {
-            return n < 10 ? "0" + n : "" + n;
-        }
-
-        var debugFn = $delegate.debug;
-
-        $delegate.debug = function () {
-            arguments[0] = timeStamp() + " - " + arguments[0];
-            debugFn.apply(null, arguments);
-        };
-        return $delegate;
-    });
 
     //routes
     $routeProvider
@@ -71,6 +48,31 @@ myModule.config(function ($routeProvider, $provide) {
             }
         })
         .otherwise({ redirectTo: "/"});
+
+    //decorators
+    $provide.decorator("$log", function ($delegate) {
+        function timeStamp() {
+            var oNow = new Date();
+            var date = [fillZero(oNow.getMonth() + 1), fillZero(oNow.getDate()), oNow.getFullYear()];
+            var time = [fillZero(oNow.getHours()), fillZero(oNow.getMinutes()), fillZero(oNow.getSeconds())];
+            var suffix = time[0] < 12 ? "AM" : "PM";
+            time[0] > 12 ? time[0] - 12 : time[0];
+            time[0] = time[0] || 12;
+            return date.join("/") + " " + time.join(":") + " " + suffix;
+        }
+
+        function fillZero(n) {
+            return n < 10 ? "0" + n : "" + n;
+        }
+
+        var debugFn = $delegate.debug;
+
+        $delegate.debug = function () {
+            arguments[0] = timeStamp() + " - " + arguments[0];
+            debugFn.apply(null, arguments);
+        };
+        return $delegate;
+    });
 
 });
 

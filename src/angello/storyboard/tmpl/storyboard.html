@@ -58,7 +58,7 @@
         </div>
     </div>
     <div ng-if="storyboard.detailsVisible" class="my-fade-animation">
-        <h3>故事详细信息</h3>
+        <h3>任务详细信息</h3>
         <form name="storyboard.detailsForm">
             <div class="form-group">
                 <div class="controls">
@@ -79,11 +79,11 @@
                             <small>标题太长了!</small>
                         </div>
                     </div>
-                    <label for="inputStatus" class="control-label">*阶段</label>
+                    <label for="inputStatus" class="control-label">*状态</label>
                     <select name="inputStatus" id="inputStatus"
                             ng-model="storyboard.editedStory.status" ng-required="true"
                             ng-options="status.name as status.name for status in storyboard.statuses"  class="form-control" >
-                        <option value="">请选择阶段</option>
+                        <option value="">请选择状态</option>
                     </select>
                     <label for="inputType" class="control-label">*类型</label>
                     <select name="inputType" id="inputType"
@@ -94,8 +94,8 @@
                     <label for="inputDescription" class="control-label">描述</label>
                 <textarea name="inputDescription" id="inputDescription" placeholder="请输入描述" cols="28" rows="4"
                           ng-model="storyboard.editedStory.description" class="form-control"></textarea>
-                    <label for="inputCriteria" class="control-label">进入下一阶段的标准</label>
-                <textarea name="inputCriteria" id="inputCriteria" placeholder="请输入进入下一阶段的标准" cols="28" rows="4"
+                    <label for="inputCriteria" class="control-label">完成的标准</label>
+                <textarea name="inputCriteria" id="inputCriteria" placeholder="完成的标准" cols="28" rows="4"
                           ng-model="storyboard.editedStory.criteria" class="form-control"></textarea>
                     <label for="inputReporter" class="control-label">*报告人</label>
                     <select name="inputReporter" id="inputReporter"
@@ -121,14 +121,14 @@
             <button class="btn btn-default pull-right"
                     ng-disabled="storyboard.detailsForm.$invalid"
                     ng-click="storyboard.updateStory()">
-                更新故事
+                更新任务
             </button>
         </div>
         <div ng-if="!storyboard.currentStory">
             <button class="btn btn-default pull-right"
                     ng-disabled="!storyboard.detailsForm.$valid"
                     ng-click="storyboard.createStory()">
-                创建故事
+                创建任务
             </button>
         </div>
     </div>
